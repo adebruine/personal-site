@@ -1,0 +1,24 @@
+footer {
+  text-align: right;
+  padding: 3px;
+  background-color: #f8f9fa!important;
+  color: black;
+}
+
+p {
+  max-width: 850px;
+}
+
+/* h1 {
+  background-color: #fa7d98;
+} */
+
+.container-sm {
+  margin-bottom: 5em;
+
+
+}
+
+#hello {
+  margin-top: 3em;
+}
