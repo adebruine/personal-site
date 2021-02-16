@@ -17,8 +17,8 @@
 <div class="container" id="projects">
   <h1>Selected projects</h1>
   <div class="row">
-    {% for project in people %}
-      <div class="col-md-6 col-lg-6 col-xl-4">
+    {% for project in object_list %}
+      <div class="col-md-6 col-lg-6 col-xl-4" id="col-card">
           <div class="card mw100">
               <img class="card-img-top" src="{% static project.image %}">
               <div class="card-body">
@@ -50,7 +50,7 @@
 
     <ul>
       <li>On my bookshelf: NK Jemisin's <a href="http://nkjemisin.com/series/the-broken-earth/">Broken Earth trilogy</a></li>
-      <li>In my headphones: <a href="http://www.michaelrakowitz.com/the-invisible-enemy-should-not-exist-lamassu-of-nineveh">Blowback</a>, a podcast about the Iraq War; <a href="https://phoebebridgers.bandcamp.com/album/punisher">Punisher</a> by Phoebe Bridgers</li>
+      <li>In my headphones: <a href="https://blowback.show/">Blowback</a>, a podcast about the Iraq War; <a href="https://phoebebridgers.bandcamp.com/album/punisher">Punisher</a> by Phoebe Bridgers</li>
       <li>On my mind: the <a href="http://www.michaelrakowitz.com/the-invisible-enemy-should-not-exist-lamassu-of-nineveh">work</a> of artist Michael Rakowitz</li>
     </ul>
 

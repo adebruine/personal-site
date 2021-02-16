@@ -31,9 +31,9 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY'] # Instead of your actual secret key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['129228ab68a5.ngrok.io']
+ALLOWED_HOSTS = ['129228ab68a5.ngrok.io', '127.0.0.1']
 
 
 # Application definition
@@ -48,10 +48,15 @@ INSTALLED_APPS = [
     'hello_world',
     'projects',
     'gsheets',
+    'bakery',
 ]
 
 GSHEETS = {
     'CLIENT_SECRETS': 'credentials.json'
+}
+
+BAKERY_VIEWS = {
+    'projects.views.ExampleTemplateView'
 }
 
 MIDDLEWARE = [
@@ -133,3 +138,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+BUILD_DIR = os.path.join(BASE_DIR, "build/")
+
+AWS_BUCKET_NAME = 'audreydebruine.com'
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY'] # Instead of your actual secret key
